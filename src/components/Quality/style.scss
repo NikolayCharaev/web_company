@@ -1,0 +1,50 @@
+.quality {
+  background: rgba(246, 246, 248, 1);
+  // height: 797px;
+
+  &__inner {
+  }
+  &__content {
+    padding: 100px 0 90px 0;
+    display: flex;
+    justify-content: space-between;
+
+    &-left {
+      max-width: 489px;
+    }
+  }
+
+  &__description {
+    margin-bottom: 30px;
+    line-height: 158.47%;
+  }
+
+  &__info {
+    color: var(--blue);
+    text-decoration: underline !important;
+  }
+
+  .projects {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 40px;
+    padding-bottom: 70px;
+
+    &__item {
+      &-title {
+        color: var(--black);
+        font-size: 36px;
+        font-weight: 400;
+        line-height: 146.28%;
+      }
+      &-text {
+        line-height: 158.47%;
+      }
+      &-top {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+      }
+    }
+  }
+}

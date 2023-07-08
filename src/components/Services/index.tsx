@@ -19,8 +19,8 @@ const Services = () => {
 
           <motion.ul
             initial="hidden"
-            // animate="visible"
             whileInView="visible"
+            viewport={{ once: true, amount: 0.5 }}
             variants={{
               hidden: { opacity: 1, scale: 0 },
               visible: {
