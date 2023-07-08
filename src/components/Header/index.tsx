@@ -1,5 +1,5 @@
-import React from 'react';
 import Button from '../custom/Button/Button';
+import { motion } from 'framer-motion';
 
 import './style.scss';
 
@@ -43,13 +43,66 @@ const Header = () => {
           </nav>
           <span className="border"></span>
         </div>
-        <div className="slogan">
+        <motion.div className="slogan">
           <div className="slogan__inner">
-            <p className="slogan__top">Передовая IT студия</p>
-            <h1 className="slogan__title">Мы создаем легкие решения сложных задач и проблем</h1>
-            <Button>Наши проекты</Button>
+            <motion.p
+              initial="hidden"
+              animate="visible"
+              variants={{
+                hidden: {
+                  opacity: 0,
+                  x: -20,
+                },
+                visible: {
+                  opacity: 1,
+                  x: 0,
+                  transition: {
+                    duration: 0.5,
+                  },
+                },
+              }}
+              className="slogan__top">
+              Передовая IT студия
+            </motion.p>
+            <motion.h1
+              initial="hidden"
+              animate="visible"
+              variants={{
+                hidden: {
+                  opacity: 0,
+                  x: -100,
+                },
+                visible: {
+                  opacity: 1,
+                  x: 0,
+                  transition: {
+                    duration: 1,
+                  },
+                },
+              }}
+              className="slogan__title">
+              Мы создаем легкие решения сложных задач и проблем
+            </motion.h1>
+            <motion.div
+              initial="hidden"
+              animate="visible"
+              variants={{
+                hidden: {
+                  opacity: 0,
+                  x: 50,
+                },
+                visible: {
+                  opacity: 1,
+                  x: 0,
+                  transition: {
+                    duration: 1,
+                  },
+                },
+              }}>
+              <Button>Наши проекты</Button>
+            </motion.div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </header>
   );
