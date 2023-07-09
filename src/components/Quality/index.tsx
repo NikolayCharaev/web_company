@@ -2,6 +2,8 @@ import React from 'react';
 import Title from '../custom/Title/Title';
 import quality from '../../assets/quality.jpg';
 
+import { motion } from 'framer-motion';
+
 import './style.scss';
 
 const Quality = () => {
@@ -10,7 +12,21 @@ const Quality = () => {
       <div className="container">
         <div className="quality__inner">
           <div className="quality__content">
-            <div className="quality__content-left">
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.5 }}
+              variants={{
+                hidden: {
+                  opacity: 0,
+                  x: -120,
+                },
+                visible: {
+                  opacity: 1,
+                  x: 0,
+                },
+              }}
+              className="quality__content-left">
               <Title style={{ maxWidth: '424px', textAlign: 'left', marginBottom: '40px' }}>
                 Высокие стандарты разработки
               </Title>
@@ -22,14 +38,43 @@ const Quality = () => {
               <a className="quality__info" href="/">
                 Подробнее о компании
               </a>
-            </div>
-            <div className="quality__content-right">
+            </motion.div>
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.5 }}
+              variants={{
+                hidden: {
+                  opacity: 0,
+                  x: 120,
+                },
+                visible: {
+                  opacity: 1,
+                  x: 0,
+                },
+              }}
+              className="quality__content-right">
               <img className="quality__image" src={quality} alt="quality" />
-            </div>
+            </motion.div>
           </div>
           <span className="border"></span>
 
-          <ul className="projects">
+          <motion.ul
+           initial="hidden"
+           whileInView="visible"
+           viewport={{ once: true, amount: 0.5 }}
+           transition={{duration: .5}}
+           variants={{
+             hidden: {
+               opacity: 0,
+               y: -120,
+             },
+             visible: {
+               opacity: 1,
+               y: 0,
+             },
+           }}
+           className="projects">
             <li className="projects__item">
               <div className="projects__item-top">
                 <svg
@@ -259,7 +304,7 @@ const Quality = () => {
               </div>
               <p className="projects__item-text">Our projects</p>
             </li>
-          </ul>
+          </motion.ul>
         </div>
       </div>
     </div>

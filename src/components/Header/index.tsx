@@ -6,8 +6,8 @@ import './style.scss';
 const Header = () => {
   return (
     <header className="header">
-      <div className="container">
-        <div className="header__inner">
+      <div className="header__inner">
+        <div className="container">
           <nav className="header__nav">
             <ul className="header__list">
               <li className="header__item">
@@ -41,8 +41,9 @@ const Header = () => {
               </li>
             </ul>
           </nav>
-          <span className="border"></span>
+ 
         </div>
+        <span className="border"></span>
         <motion.div className="slogan">
           <div className="slogan__inner">
             <motion.p
