@@ -1,9 +1,13 @@
+import { useState, useEffect } from 'react';
 import Button from '../custom/Button/Button';
 import { motion } from 'framer-motion';
+import { AiOutlineMenu, AiOutlineCloseCircle } from 'react-icons/ai';
 
 import './style.scss';
 
 const Header = () => {
+  const [menuActive, setMenuActive] = useState<boolean>(false);
+
   return (
     <header className="header">
       <div className="header__inner">
@@ -40,8 +44,53 @@ const Header = () => {
                 </a>
               </li>
             </ul>
+
+            <div className="header__list-mobile">
+              {!menuActive ? (
+                <AiOutlineMenu size={35} color="white" onClick={() => setMenuActive(true)} />
+              ) : (
+                <AiOutlineCloseCircle
+                  size={35}
+                  color="white"
+                  onClick={() => setMenuActive(false)}
+                />
+              )}
+
+              {menuActive && (
+                <ul className='header__list-mobile-active'>
+                  <li className="header__item">
+                    <a className="header__link" href="/">
+                      Главная
+                    </a>
+                  </li>
+
+                  <li className="header__item">
+                    <a className="header__link" href="/">
+                      Наши проекты
+                    </a>
+                  </li>
+
+                  <li className="header__item">
+                    <a className="header__link" href="/">
+                      Услуги
+                    </a>
+                  </li>
+
+                  <li className="header__item">
+                    <a className="header__link" href="/">
+                      Новости
+                    </a>
+                  </li>
+
+                  <li className="header__item">
+                    <a className="header__link" href="/">
+                      Контакты
+                    </a>
+                  </li>
+                </ul>
+              )}
+            </div>
           </nav>
- 
         </div>
         <span className="border"></span>
         <motion.div className="slogan">
