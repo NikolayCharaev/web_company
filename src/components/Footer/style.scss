@@ -1,0 +1,125 @@
+@import '../../scss/mixins';
+.footer {
+  background-color: var(--lightGrey);
+
+  &__inner {
+    @include flex-between;
+    gap: 43px;
+    margin-bottom: 70px;
+    padding-top: 70px;
+  }
+  &__title {
+    margin-bottom: 35px;
+    color: var(--black);
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+  &__copyright {
+    text-align: center;
+    padding: 30px 0;
+  }
+
+  &__list {
+    @include flex-col;
+    gap: 30px;
+  }
+
+  &__item {
+    a {
+      color: inherit !important;
+    }
+  }
+
+  &__col-one {
+    .mail {
+      position: relative;
+
+      &::before {
+        position: absolute;
+        top: 3px;
+        left: -22px;
+        content: '';
+        width: 15px;
+        height: 15px;
+        background-image: url(../../assets/icons/mail.svg);
+        background-repeat: no-repeat;
+      }
+    }
+
+    .phone {
+      position: relative;
+
+      &::before {
+        position: absolute;
+        top: 3px;
+        left: -22px;
+        content: '';
+        width: 15px;
+        height: 15px;
+        background-image: url(../../assets/icons/phone.svg);
+        background-repeat: no-repeat;
+      }
+    }
+
+    .location {
+      position: relative;
+
+      &::before {
+        position: absolute;
+        top: 3px;
+        left: -22px;
+        content: '';
+        width: 15px;
+        height: 15px;
+        background-image: url(../../assets/icons/location.svg);
+        background-repeat: no-repeat;
+      }
+    }
+  }
+  &__col-two {
+    .footer__link{ 
+        position: relative;
+        &::before{ 
+            position: absolute;
+            top: 5px;
+            left: -22px;
+            content: '';
+            width: 15px;
+            height: 15px;
+            background-image: url(../../assets/icons/right-arrow.svg);
+            background-repeat: no-repeat;
+        }
+    }
+  }
+  &__col-three {
+    .footer__link{ 
+        position: relative;
+        &::before{ 
+            position: absolute;
+            top: 5px;
+            left: -22px;
+            content: '';
+            width: 15px;
+            height: 15px;
+            background-image: url(../../assets/icons/right-arrow.svg);
+            background-repeat: no-repeat;
+        }
+    }
+  }
+  &__col-four {
+    .footer__link{ 
+        position: relative;
+        &::before{ 
+            position: absolute;
+            top: 5px;
+            left: -22px;
+            content: '';
+            width: 15px;
+            height: 15px;
+            background-image: url(../../assets/icons/right-arrow.svg);
+            background-repeat: no-repeat;
+        }
+    }
+  }
+}
