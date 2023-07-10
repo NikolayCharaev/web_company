@@ -19,11 +19,11 @@ const Quality = () => {
               variants={{
                 hidden: {
                   opacity: 0,
-                  x: -120,
+                  y: -120,
                 },
                 visible: {
                   opacity: 1,
-                  x: 0,
+                  y: 0,
                 },
               }}
               className="quality__content-left">
@@ -46,11 +46,11 @@ const Quality = () => {
               variants={{
                 hidden: {
                   opacity: 0,
-                  x: 120,
+                  y: 120,
                 },
                 visible: {
                   opacity: 1,
-                  x: 0,
+                  y: 0,
                 },
               }}
               className="quality__content-right">
